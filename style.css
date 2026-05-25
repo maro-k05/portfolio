@@ -787,25 +787,7 @@ footer {
   animation:orbit360 24s linear infinite;
 }
 
-@keyframes orbit360{
-  from{
-    transform:rotate(0deg);
-  }
 
-  to{
-    transform:rotate(360deg);
-  }
-}
-
-@keyframes orbit360Reverse{
-  from{
-    transform:rotate(360deg);
-  }
-
-  to{
-    transform:rotate(0deg);
-  }
-}
 
 .robot-core {
   position: relative;
