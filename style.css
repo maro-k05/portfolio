@@ -182,7 +182,20 @@ nav a:hover::after {
   visibility: visible;
   transform: translateY(0);
 }
+.dropdown:hover .dropdown-content,
+.dropdown:focus-within .dropdown-content {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0);
+}
 
+.dropbtn {
+  color: white !important;
+  background: transparent !important;
+  border: none;
+  cursor: pointer;
+}
 /* GENERAL SECTIONS */
 
 section {
