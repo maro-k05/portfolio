@@ -1408,12 +1408,78 @@ footer {
   }
 }
 
+
 /* =========================
-   FINAL DROPDOWN FIX
-   Portrait + landscape phone
-   Keeps menus inside screen
+   FINAL CLEAN DROPDOWN FIX
+   Works on laptop + phone portrait + landscape
 ========================= */
 
+/* Desktop/laptop dropdown */
+.dropdown-content {
+  position: absolute;
+  top: 38px;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+
+  width: 240px;
+  max-width: calc(100vw - 30px);
+
+  background: rgba(15,15,30,0.96);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 18px;
+
+  padding: 12px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transition: 0.35s;
+
+  backdrop-filter: blur(18px);
+
+  z-index: 99999;
+}
+
+.dropdown:hover .dropdown-content,
+.dropdown:focus-within .dropdown-content {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+
+  transform: translateX(-50%) translateY(0);
+}
+
+.dropdown-content a {
+  width: 100%;
+  height: auto !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+
+  color: white !important;
+  font-size: 14px !important;
+  font-weight: 600;
+
+  padding: 12px 15px !important;
+
+  border-radius: 12px;
+
+  white-space: normal !important;
+  text-align: left !important;
+  text-decoration: none !important;
+}
+
+.dropdown-content a:hover {
+  background: rgba(162,89,255,0.18);
+}
+
+/* Phone portrait + tablet */
 @media (max-width: 900px) {
 
   header {
@@ -1427,7 +1493,7 @@ footer {
   }
 
   .dropdown {
-    position: static !important;
+    position: relative !important;
   }
 
   .dropbtn {
@@ -1439,74 +1505,79 @@ footer {
   }
 
   .dropdown-content {
-    display: flex !important;
-    flex-direction: column !important;
+    position: absolute !important;
 
-    position: fixed !important;
-    top: 92px !important;
+    top: 70px !important;
     left: 50% !important;
     right: auto !important;
 
-    width: min(92vw, 320px) !important;
-    max-width: 92vw !important;
-    max-height: 60vh !important;
+    width: 220px !important;
+    max-width: calc(100vw - 30px) !important;
+    max-height: 55vh !important;
     overflow-y: auto !important;
 
-    background: rgba(15, 15, 30, 0.98) !important;
-    border: 1px solid rgba(255,255,255,0.16) !important;
-    border-radius: 16px !important;
-    padding: 10px !important;
-    gap: 8px !important;
+    padding: 12px !important;
+    border-radius: 22px !important;
+
+    background: rgba(10,10,25,0.97) !important;
+    border: 1px solid rgba(255,255,255,0.12) !important;
+
+    transform: translateX(-50%) translateY(10px) !important;
 
     opacity: 0 !important;
     visibility: hidden !important;
     pointer-events: none !important;
 
-    transform: translateX(-50%) translateY(10px) !important;
-    z-index: 99999 !important;
+    z-index: 999999 !important;
+
+    box-shadow: 0 20px 60px rgba(0,0,0,0.45) !important;
   }
 
-  .dropdown:focus-within .dropdown-content,
-  .dropdown:hover .dropdown-content {
+  .dropdown:hover .dropdown-content,
+  .dropdown:focus-within .dropdown-content {
     opacity: 1 !important;
     visibility: visible !important;
     pointer-events: auto !important;
+
     transform: translateX(-50%) translateY(0) !important;
   }
 
   .dropdown-content a {
     width: 100% !important;
-    height: auto !important;
-    min-height: 42px !important;
-
-    display: flex !important;
-    align-items: center !important;
-    justify-content: flex-start !important;
+    min-height: 44px !important;
 
     color: white !important;
-    font-size: 13px !important;
-    line-height: 1.3 !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
 
-    padding: 12px 14px !important;
-    white-space: normal !important;
-    text-align: left !important;
+    padding: 14px 16px !important;
+
+    border-radius: 14px !important;
   }
 }
 
-/* Phone portrait: keep navbar one line and dropdown visible */
+/* Small phone portrait: keep the dropdown inside screen */
 @media (max-width: 700px) and (orientation: portrait) {
 
-  nav {
-    flex-wrap: nowrap !important;
-    gap: 12px !important;
+  .dropdown-content {
+    top: 62px !important;
+
+    left: 12px !important;
+    right: 12px !important;
+
+    width: auto !important;
+    max-width: none !important;
+
+    transform: translateY(10px) !important;
   }
 
-  .dropdown-content {
-    top: 92px !important;
+  .dropdown:hover .dropdown-content,
+  .dropdown:focus-within .dropdown-content {
+    transform: translateY(0) !important;
   }
 }
 
-/* Phone landscape: smaller header + menu inside viewport */
+/* Phone landscape */
 @media (max-width: 900px) and (orientation: landscape) {
 
   header {
@@ -1529,135 +1600,24 @@ footer {
   }
 
   .dropdown-content {
-    top: 72px !important;
-    width: min(88vw, 300px) !important;
-    max-height: 55vh !important;
-  }
+    top: 52px !important;
 
-  section {
-    padding-top: 115px !important;
-  }
-}
+    left: 12px !important;
+    right: 12px !important;
 
-/* FINAL DROPDOWN SCREEN FIX */
+    width: auto !important;
+    max-width: none !important;
+    max-height: 50vh !important;
 
-@media (max-width: 900px) {
-
-  header,
-  nav {
-    overflow: visible !important;
-  }
-
-  .dropdown {
-    position: relative !important;
-  }
-
-  .dropdown-content {
-    position: fixed !important;
-    top: 105px !important;
-    left: 50% !important;
-    right: auto !important;
-
-    width: 220px !important;
-    max-width: calc(100vw - 24px) !important;
-
-    transform: translateX(-50%) translateY(10px) !important;
-
-    opacity: 0 !important;
-    visibility: hidden !important;
-    pointer-events: none !important;
-
-    z-index: 999999 !important;
+    transform: translateY(10px) !important;
   }
 
   .dropdown:hover .dropdown-content,
   .dropdown:focus-within .dropdown-content {
-    opacity: 1 !important;
-    visibility: visible !important;
-    pointer-events: auto !important;
-
-    transform: translateX(-50%) translateY(0) !important;
+    transform: translateY(0) !important;
   }
 
-  .dropdown-content a {
-    width: 100% !important;
-    color: white !important;
-    white-space: normal !important;
-  }
-}
-
-
-
-/* =========================
-   FINAL DROPDOWN FIX
-========================= */
-
-.dropdown-content {
-  position: absolute;
-  top: 38px;
-  left: 50%;
-  transform: translateX(-50%) translateY(10px);
-
-  width: 220px;
-  max-width: calc(100vw - 30px);
-
-  background: rgba(15,15,30,0.96);
-  border: 1px solid rgba(255,255,255,0.1);
-  border-radius: 18px;
-
-  padding: 12px;
-
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-
-  opacity: 0;
-  visibility: hidden;
-
-  transition: 0.35s;
-
-  backdrop-filter: blur(18px);
-
-  z-index: 9999;
-}
-
-.dropdown:hover .dropdown-content,
-.dropdown:focus-within .dropdown-content {
-  opacity: 1;
-  visibility: visible;
-
-  transform: translateX(-50%) translateY(0);
-}
-
-@media (max-width:900px){
-
-  header,
-  nav{
-    overflow: visible !important;
-  }
-
-  .dropdown{
-    position: relative !important;
-  }
-
-  .dropdown-content{
-    width: 220px !important;
-    max-width: calc(100vw - 30px) !important;
-
-    left: 50% !important;
-    top: 38px !important;
-
-    transform: translateX(-50%) translateY(10px) !important;
-  }
-
-  .dropdown:hover .dropdown-content,
-  .dropdown:focus-within .dropdown-content{
-    transform: translateX(-50%) translateY(0) !important;
-  }
-
-  .dropdown-content a{
-    width: 100% !important;
-    color: white !important;
-    white-space: normal !important;
+  section {
+    padding-top: 115px !important;
   }
 }
