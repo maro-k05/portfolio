@@ -1294,3 +1294,16 @@ body {
   }
 
 }
+/* FINAL LAPTOP + PHONE NAV TEXT COLOR FIX */
+
+nav a,
+nav a:visited,
+nav a:link,
+.dropbtn,
+.dropdown .dropbtn {
+  color: white !important;
+}
+
+.dropbtn {
+  background: transparent !important;
+}
