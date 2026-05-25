@@ -1133,3 +1133,123 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
+/* =========================
+   MOBILE RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 900px) {
+
+  header {
+    padding: 15px 5%;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  nav a {
+    margin-left: 0;
+    font-size: 13px;
+  }
+
+  section {
+    padding: 120px 5% 70px;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .hero-text {
+    max-width: 100%;
+  }
+
+  h1 {
+    font-size: clamp(38px, 11vw, 65px);
+  }
+
+  .typing {
+    font-size: 18px;
+  }
+
+  .hero p,
+  .lead {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .btns {
+    justify-content: center;
+  }
+
+  .title {
+    font-size: 32px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    min-height: auto;
+  }
+
+  .thumb {
+    height: 200px;
+  }
+
+  .full-skills-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .skill-category {
+    padding: 22px;
+  }
+
+  footer {
+    text-align: center;
+    padding: 30px 20px;
+  }
+
+}
+
+
+/* EXTRA SMALL PHONES */
+
+@media (max-width: 500px) {
+
+  h1 {
+    font-size: 34px;
+  }
+
+  .typing {
+    font-size: 16px;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .tag {
+    font-size: 12px;
+  }
+
+  .card {
+    padding: 18px;
+    border-radius: 22px;
+  }
+
+  .thumb {
+    height: 170px;
+  }
+
+}
