@@ -1133,154 +1133,218 @@ body {
     grid-template-columns: 1fr;
   }
 }
-
 /* =========================
-   MOBILE RESPONSIVE DESIGN
+   PERFECT MOBILE VERSION
 ========================= */
 
 @media (max-width: 900px) {
 
-  header {
-    padding: 15px 5%;
-    flex-direction: column;
-    gap: 15px;
+  header{
+    padding:16px 20px !important;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    gap:14px;
   }
 
-  nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 12px;
+  .logo{
+    font-size:28px !important;
+    text-align:center;
+    line-height:1.1;
   }
 
-  nav a {
-    margin-left: 0;
-    font-size: 13px;
+  nav{
+    display:flex !important;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-items:center;
+    gap:12px 18px;
+    width:100%;
   }
 
-  section {
-    padding: 120px 5% 70px;
+  nav a,
+  .dropbtn{
+    margin:0 !important;
+    font-size:15px !important;
+    white-space:nowrap;
   }
 
-  .hero {
-    grid-template-columns: 1fr;
-    text-align: center;
-    gap: 40px;
+  .dropdown-content{
+    left:50%;
+    transform:translateX(-50%);
   }
 
-  .hero-text {
-    max-width: 100%;
+  section{
+    padding:180px 5% 70px;
   }
 
-  h1 {
-    font-size: clamp(38px, 11vw, 65px);
+  .hero{
+    grid-template-columns:1fr;
+    text-align:center;
+    gap:50px;
+    min-height:auto;
   }
 
-  .typing {
-    font-size: 18px;
+  .hero-text{
+    max-width:100%;
+    margin:auto;
+  }
+
+  h1{
+    font-size:clamp(42px,11vw,68px);
+    line-height:1.05;
+  }
+
+  .typing{
+    font-size:20px;
   }
 
   .hero p,
-  .lead {
-    font-size: 15px;
-    line-height: 1.7;
+  .lead{
+    font-size:16px;
+    line-height:1.8;
   }
 
-  .btns {
-    justify-content: center;
+  .btns{
+    justify-content:center;
+    width:100%;
   }
 
-  .title {
-    font-size: 32px;
+  .btn{
+    width:100%;
+    max-width:420px;
+    text-align:center;
+    padding:16px 20px;
+    font-size:18px;
   }
 
-  .grid {
-    grid-template-columns: 1fr;
+  .title{
+    font-size:34px;
   }
 
-  .card {
-    min-height: auto;
+  .grid{
+    grid-template-columns:1fr;
   }
 
-  .thumb {
-    height: 200px;
+  .card{
+    min-height:auto;
   }
 
-  .full-skills-layout {
-    grid-template-columns: 1fr;
+  .thumb{
+    height:220px;
   }
 
-  .skill-category {
-    padding: 22px;
+  .full-skills-layout{
+    grid-template-columns:1fr;
   }
 
-  footer {
-    text-align: center;
-    padding: 30px 20px;
+  .skill-category{
+    padding:22px;
   }
 
+  .tech-hero{
+    min-height:420px;
+  }
+
+  .core-system{
+    width:260px;
+    height:260px;
+  }
+
+  .ring-one{
+    width:180px;
+    height:180px;
+  }
+
+  .ring-two{
+    width:230px;
+    height:230px;
+  }
+
+  .ring-three{
+    width:270px;
+    height:140px;
+  }
+
+  .tech-chip{
+    width:50px;
+    height:50px;
+    font-size:12px;
+  }
+
+  .robot-core{
+    transform:scale(0.82);
+  }
+
+  .contact-box{
+    padding:30px 22px;
+  }
+
+  footer{
+    text-align:center;
+    padding:25px 15px;
+  }
 }
 
 
-/* EXTRA SMALL PHONES */
+/* SMALL PHONES */
 
-@media (max-width: 500px) {
+@media (max-width: 500px){
 
-  h1 {
-    font-size: 34px;
+  header{
+    padding:14px 14px !important;
   }
 
-  .typing {
-    font-size: 16px;
+  .logo{
+    font-size:24px !important;
   }
 
-  .btn {
-    width: 100%;
-    text-align: center;
+  nav{
+    gap:10px 14px;
   }
 
-  .tag {
-    font-size: 12px;
+  nav a,
+  .dropbtn{
+    font-size:14px !important;
   }
 
-  .card {
-    padding: 18px;
-    border-radius: 22px;
+  section{
+    padding-top:190px;
   }
 
-  .thumb {
-    height: 170px;
+  h1{
+    font-size:52px;
   }
 
-}
-@media (max-width: 700px) {
-  header {
-    padding: 14px 18px;
+  .typing{
+    font-size:18px;
   }
 
-  .logo {
-    font-size: 32px;
-    text-align: center;
+  .hero p,
+  .lead{
+    font-size:15px;
   }
 
-  nav {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 14px 22px;
+  .btn{
+    font-size:17px;
+    padding:15px;
   }
 
-  nav a {
-    font-size: 15px;
-    margin: 0;
+  .tag{
+    font-size:12px;
   }
 
-  nav a:nth-child(6) {
-    flex-basis: 100%;
-    text-align: center;
+  .thumb{
+    height:180px;
   }
 
-  .hero {
-    padding-top: 230px;
+  .card{
+    padding:18px;
+    border-radius:24px;
   }
+
+  .title{
+    font-size:30px;
+  }
+
 }
