@@ -103,27 +103,19 @@ section {
   position: relative;
 }
 
-.hero{
-  display:flex !important;
-  flex-direction:column !important;
-  align-items:center !important;
-  justify-content:center !important;
-
-  text-align:center !important;
-
-  gap:10px !important;
-
-  min-height:auto !important;
+.hero {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(420px, 0.95fr);
+  align-items: center;
+  gap: 55px;
+  overflow: hidden;
 }
 
-.tech-hero{
-  min-height:420px !important;
-
-  display:flex;
-  align-items:center;
-  justify-content:center;
-
-  margin-top:-20px;
+.hero-text {
+  position: relative;
+  z-index: 2;
+  max-width: 760px;
 }
 
 .tag {
@@ -1314,22 +1306,4 @@ nav a:link,
 
 .dropbtn {
   background: transparent !important;
-}
-@media(max-width:700px){
-
-  .ring-one{
-    width:170px !important;
-    height:170px !important;
-  }
-
-  .ring-two{
-    width:220px !important;
-    height:220px !important;
-  }
-
-  .ring-three{
-    width:260px !important;
-    height:130px !important;
-  }
-
 }
