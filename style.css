@@ -140,12 +140,22 @@ h1 span,
   color: var(--purple);
   text-shadow: 0 0 25px #7c4dff;
 }
+.typing{
+  margin:22px 0;
+  font-size:25px;
+  color:#9be7ff;
 
-.typing {
-  margin: 22px 0;
-  font-size: 25px;
-  color: #9be7ff;
-  min-height: 38px;
+  min-height:38px;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  white-space:nowrap;
+
+  overflow:hidden;
+
+  text-align:center;
 }
 
 .hero p,
@@ -1259,6 +1269,15 @@ body {
 
   .dropbtn{
     padding: 0 !important;
+  }
+
+}
+@media (max-width:700px){
+
+  .typing{
+    font-size:18px !important;
+    min-height:28px !important;
+    white-space:nowrap !important;
   }
 
 }
