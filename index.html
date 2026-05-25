@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Maria Kanaan | 3D Portfolio</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+
+<body>
+  <canvas id="bg"></canvas>
+  <div class="aurora"></div>
+  <div class="overlay" id="overlay"></div>
+
+  <header>
+    <a href="#" class="logo">Maria.dev</a>
+  <nav>
+
+    <a href="#home">Home</a>
+
+    <a href="#about">About</a>
+
+    <div class="dropdown">
+      <button class="dropbtn">
+        Projects ▾
+      </button>
+
+      <div class="dropdown-content">
+        <a href="#ai-projects">AI & Machine Learning</a>
+        <a href="#robotics">Robotics & HRI</a>
+        <a href="#software">Web Development</a>
+        <a href="#competitions">Competitions</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <button class="dropbtn">
+        Journey ▾
+      </button>
+
+      <div class="dropdown-content">
+        <a href="#education">Education</a>
+        <a href="#experience">Experience</a>
+      </div>
+    </div>
+
+    <a href="#skills">Skills</a>
+
+    <a href="#contact">Contact</a>
+
+  </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="hero-text">
+      <div class="tag">✨ Interactive 3D Portfolio</div>
+      <h1>Hi, I’m <span>Maria Kanaan</span></h1>
+      <h3 class="typing" id="typing"></h3>
+      <p>
+        I build creative software projects combining artificial intelligence, robotics,
+        machine learning, full-stack web development, and human–robot interaction.
+        Click each project to open a rich animated side page with pictures and details.
+      </p>
+      <div class="btns">
+        <a href="#ai-projects" class="btn">Explore Projects</a>
+        <a href="#contact" class="btn secondary">Contact Me</a>
+      </div>
+    </div>
+
+    <div class="tech-hero" aria-hidden="true">
+      <div class="holo-grid"></div>
+
+      <div class="core-system">
+        <div class="orbit-ring ring-one"></div>
+        <div class="orbit-ring ring-two"></div>
+        <div class="orbit-ring ring-three"></div>
+
+        <div class="robot-core">
+          <div class="robot-head">
+            <span class="robot-eye left"></span>
+            <span class="robot-eye right"></span>
+          </div>
+          <div class="robot-neck"></div>
+          <div class="robot-body"></div>
+        </div>
+      </div>
+
+      <div class="tech-chip chip-ai">AI</div>
+      <div class="tech-chip chip-ml">ML</div>
+      <div class="tech-chip chip-cv">CV</div>
+      <div class="tech-chip chip-code">&lt;/&gt;</div>
+      <div class="tech-chip chip-db">DB</div>
+
+      <div class="circuit-card circuit-one">
+        <span></span><span></span><span></span>
+      </div>
+
+      <div class="circuit-card circuit-two">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="reveal">
+    <h2 class="title">About <span>Me</span></h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Computer Engineering</h3>
+        <p>I am a Computer Engineering student at USEK, passionate about building useful and reliable software systems.</p>
+      </div>
+      <div class="card">
+        <h3>Creative Builder</h3>
+        <p>I love projects that combine code, design, artificial intelligence, animation, hardware, and real interaction.</p>
+      </div>
+      <div class="card">
+        <h3>Human-Centered Tech</h3>
+        <p>My strongest project direction is AI + HRI: making technology interactive, friendly, and practical.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="ai-projects" class="reveal">
+    <h2 class="title">AI & <span>Machine Learning</span></h2>
+    <div class="grid" id="aiProjects"></div>
+  </section>
+
+  <section id="robotics" class="reveal featured-section">
+    <h2 class="title">Robotics & <span>HRI</span></h2>
+    <p class="section-subtitle">
+      Interactive robot systems, classroom automation, face recognition, Gemini AI, and Pepper-based human–robot interaction.
+    </p>
+    <div class="grid single-feature-grid" id="roboticsProjects"></div>
+  </section>
+
+  <section id="software" class="reveal">
+    <h2 class="title">Web & <span>Software Development</span></h2>
+    <div class="grid" id="softwareProjects"></div>
+  </section>
+
+  <section id="competitions" class="reveal featured-section">
+    <h2 class="title">Competitions & <span>Achievements</span></h2>
+    <p class="section-subtitle">
+      Robotics competitions, teamwork, hardware building, sensor testing, and award-winning project experiences.
+    </p>
+    <div class="grid single-feature-grid" id="competitionGrid"></div>
+  </section>
+
+  <section id="skills" class="reveal skills-section">
+    <h2 class="title">Technical <span>Skills</span></h2>
+
+    <p class="section-subtitle">
+      A complete map of my programming, web, AI, robotics, database, and software engineering skills.
+    </p>
+
+    <div class="skills-showcase full-skills-layout">
+
+      <div class="skill-category">
+        <h3>Languages & Development</h3>
+        <div class="skill-tag-cloud">
+          <span>Java</span>
+          <span>Python</span>
+          <span>C++</span>
+          <span>C</span>
+          <span>Linux Environment</span>
+          <span>SQL</span>
+          <span>JavaScript</span>
+          <span>VB.NET</span>
+        </div>
+      </div>
+
+      <div class="skill-category">
+        <h3>Web & Software</h3>
+        <div class="skill-tag-cloud">
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>PHP</span>
+          <span>MySQL</span>
+          <span>Full-Stack Development</span>
+          <span>OOP</span>
+          <span>UML</span>
+          <span>WPF</span>
+          <span>XAML</span>
+        </div>
+      </div>
+
+      <div class="skill-category">
+        <h3>AI & Machine Learning</h3>
+        <div class="skill-tag-cloud">
+          <span>Machine Learning</span>
+          <span>Neural Networks</span>
+          <span>PyTorch</span>
+          <span>Scikit-Learn</span>
+          <span>Pandas</span>
+          <span>NumPy</span>
+          <span>Matplotlib</span>
+          <span>Data Visualization</span>
+        </div>
+      </div>
+
+      <div class="skill-category">
+        <h3>Computer Vision & HRI</h3>
+        <div class="skill-tag-cloud">
+          <span>OpenCV</span>
+          <span>Face Recognition</span>
+          <span>Mask Detection</span>
+          <span>Hand-Raise Detection</span>
+          <span>Pepper Robot</span>
+          <span>NAOqi</span>
+          <span>Gemini API</span>
+          <span>Flask</span>
+        </div>
+      </div>
+
+      <div class="skill-category">
+        <h3>Robotics & Embedded Systems</h3>
+        <div class="skill-tag-cloud">
+          <span>Arduino</span>
+          <span>Raspberry Pi</span>
+          <span>Sensors</span>
+          <span>Embedded Systems</span>
+          <span>Client-Server Architecture</span>
+          <span>TCP Sockets</span>
+          <span>Hardware Testing</span>
+        </div>
+      </div>
+
+      <div class="skill-category">
+        <h3>Tools & Platforms</h3>
+        <div class="skill-tag-cloud">
+          <span>VS Code</span>
+          <span>Jupyter Notebook</span>
+          <span>Proteus</span>
+          <span>MASM32</span>
+          <span>Netlify</span>
+          <span>Git Basics</span>
+          <span>Windows 11</span>
+          <span>Linux</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="experience" class="reveal">
+    <h2 class="title">Experience</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <h3>ORACOM — Software Development Intern</h3>
+        <p>Worked on a hospital management system, backend logic, database operations, UI improvements, and debugging.</p>
+      </div>
+      <div class="timeline-item">
+        <h3>ORACOM — Part-Time Software Developer</h3>
+        <p>Developed and maintained modules using VB.NET, WPF/XAML, SQL Server, reusable components, testing, and deployment support.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="education" class="reveal">
+    <h2 class="title">My <span>Education</span></h2>
+
+    <div class="timeline">
+
+      <div class="timeline-item">
+        <h3>USEK — Computer Engineering</h3>
+
+        <p>
+          Computer Engineering student at the Holy Spirit University of Kaslik (USEK),
+          focused on artificial intelligence, robotics, software engineering,
+          machine learning, and embedded systems.
+        </p>
+      </div>
+
+      <div class="timeline-item">
+        <h3>CCJ — French Baccalaureate</h3>
+
+        <p>
+          Graduated from Central College Jounieh (CCJ) with a French Baccalaureate
+          diploma and a “Très Bien” distinction.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="contact" class="reveal">
+    <h2 class="title">Contact <span>Me</span></h2>
+    <div class="contact-box">
+      <h3>Let’s Build Something Amazing</h3>
+      <p>Email: mariaekanaan@gmail.com</p>
+      <p>Location: Lebanon</p>
+      <p>Focus: AI • Robotics • HRI • Web Development • Software Engineering</p>
+    </div>
+  </section>
+
+  <aside class="project-panel" id="projectPanel">
+    <div class="panel-top">
+      <h2 id="panelTitle"></h2>
+      <button class="close-btn" id="closePanel">×</button>
+    </div>
+
+    <div class="panel-hero">
+      <img id="panelHeroImg" src="" alt="Project image">
+      <div class="hero-caption" id="panelCaption"></div>
+    </div>
+
+    <div class="panel-section">
+      <h3>Overview</h3>
+      <p id="panelOverview"></p>
+    </div>
+
+    <div class="panel-section">
+      <h3>Project Pictures / Visual Gallery</h3>
+      <div class="gallery" id="panelGallery"></div>
+    </div>
+
+    <div class="panel-section">
+      <h3>Main Features</h3>
+      <ul id="panelFeatures"></ul>
+    </div>
+
+    <div class="panel-section">
+      <h3>Technologies Used</h3>
+      <div class="skill-cloud" id="panelTech"></div>
+    </div>
+  </aside>
+
+  <footer>
+    <p>© 2026 Maria Kanaan. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
